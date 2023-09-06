@@ -14,6 +14,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(SendCodeState());
       } else if(event is ContinueEvent){
         emit(ContinueState());
+      } else if(event is CodeValidEvent){
+        emit(CodeValidState());
       }
     });
   }
